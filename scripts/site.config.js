@@ -6,66 +6,59 @@ export const siteConfig = {
     name:        "Gravit",
     nameShort:   "Gravit",
     description: 'Relações com Investidores — Gravit.',
-    logoOriginal: '/assets/logotipo/logotipo-original.webp',
-    logoNegative: '/assets/logotipo/logotipo-negative.webp',
-    logoContrast: '/assets/logotipo/logotipo-negative.webp',
-    favicon:      '/favicon.png',
+    logoOriginal: '/assets/logotipo/logotipo-original.svg',
+    logoNegative: '/assets/logotipo/logotipo-negative.svg',
+    logoContrast: '/assets/logotipo/logotipo-negative.svg',
+    favicon:      '/favicon.svg',
   },
 
   colors: {
-    primary:   "#05cbeb",
-    secondary: "#235239",
-    tertiary:  "#b81d5d",
+    primary:   "#0B5B68",
+    secondary: "#00D865",
+    tertiary:  "#F4A261",
   },
 
   fonts: {
-    display: "poppins",
-    body:    "inter",
+    display: "Playfair Display",
+    body:    "Inter",
   },
 
   ticker: {
-    type:      "iframe",
+    type:      "static",
     iframeUrl: "",
-    items: [],
+    items: [
+      { symbol: 'WRLT3', price: 'R$ 00,00', change: '0,00%', direction: 'up' }
+    ],
   },
 
   nav: [
-    { label: "Resultados", href: "/central-resultados.html", children: [] },
-    { label: "Documentos CVM", href: "/documentos-cvm.html", children: [] },
-    { label: "Fale com RI", href: "/fale-com-ri.html", children: [] },
-    { label: "Mailing", href: "/mailing.html", children: [] },
-    { label: "Canal Teste", href: "/", children: [] },
+    { label: 'A Companhia', href: '/a-companhia.html', children: [] },
+    { label: 'Governança', children: [
+        { label: 'Composição Acionária', href: '/composicao-acionaria.html' },
+        { label: 'Atas e Assembleias',   href: '/atas-assembleias.html'     },
+        { label: 'Documentos CVM',       href: '/documentos-cvm.html'       },
+    ]},
+    { label: 'Investidores', children: [
+        { label: 'Central de Resultados', href: '/central-resultados.html' },
+        { label: 'Calendário de Eventos', href: '/calendario-eventos.html' },
+        { label: 'Ratings',               href: '/ratings.html'            },
+    ]},
+    { label: 'Contato', children: [
+        { label: 'Fale com RI', href: '/fale-com-ri.html' },
+        { label: 'Mailing',     href: '/mailing.html'     },
+    ]},
   ],
 
   empresas: [
-    { id: 'principal', label: "Gravit", short: 'G' },
+    { id: 'principal', label: "Gravit", short: "G" }
   ],
 
-  supabase: {
-    url:      "https://mmhuwlpsgnvoxyuofliq.supabase.co",
-    anonKey:  "sb_publishable_BBSPbQc2kZngiK45ecfXaA_X4NANiGj",
-    portalId: null,
-  },
-
   header: { variant: 'sidebar' },
-
-  seo: {
-    title:             "Gravit - Teste Portal",
-    description:       "",
-    googleAnalyticsId: "",
-    clarityId:         "",
-  },
-
-  contact: {
-    email: "",
-  },
-
-  languages: ["pt-BR","en","es"],
 
   restrictedNav: [],
 
   footer: {
-    variant:   'simple',
+    variant: 'simple',
     address:   "",
     email:     "",
     phone:     "",
@@ -78,6 +71,38 @@ export const siteConfig = {
       { label: "Definições de Cookies", href: '/definicao-de-cookies.html' }
     ],
     legalText: "As informações contidas neste site são de caráter meramente informativo e não constituem oferta de valores mobiliários.",
+  },
+
+  splash: {
+    enabled: false,
+    size: 'md',
+    titulo: '',
+    texto: '',
+    conteudo: '',
+    legenda: '',
+    buttons: [],
+  },
+
+  cookies: {
+    enabled: true,
+    layout: 'full',
+    theme: 'light',
+    title: 'Utilizamos cookies',
+    description: 'Usamos cookies para melhorar sua experiência.',
+    acceptLabel: 'Aceitar todos',
+    rejectLabel: 'Rejeitar',
+    showReject: true,
+    showCustomize: false,
+  },
+
+  errorPages: [],
+
+  banner: [],
+
+  supabase: {
+    url:      "https://mmhuwlpsgnvoxyuofliq.supabase.co",
+    anonKey:  "sb_publishable_BBSPbQc2kZngiK45ecfXaA_X4NANiGj",
+    portalId: "9493dc14-ef12-4f8a-a35f-8229c103252a",
   },
 
 };
