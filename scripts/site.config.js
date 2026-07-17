@@ -13,13 +13,13 @@ export const siteConfig = {
   },
 
   colors: {
-    primary:   "#680b3f",
-    secondary: "#0018d8",
-    tertiary:  "#d5ff00",
+    primary:   "#0B5B68",
+    secondary: "#00D865",
+    tertiary:  "#F4A261",
   },
 
   fonts: {
-    display: "Playfair Display",
+    display: "Plus Jakarta Sans",
     body:    "Inter",
   },
 
@@ -50,7 +50,7 @@ export const siteConfig = {
   ],
 
   empresas: [
-    { id: 'principal', label: "Gravit", short: "G" }
+    { id: "principal-1784328469005", label: "Gravit", short: "G" }
   ],
 
   header: { variant: 'tabmenu' },
