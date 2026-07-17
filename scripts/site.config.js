@@ -53,7 +53,7 @@ export const siteConfig = {
     { id: 'principal', label: "Gravit", short: "G" }
   ],
 
-  header: { variant: 'sidebar' },
+  header: { variant: 'tabmenu' },
 
   restrictedNav: [],
 
