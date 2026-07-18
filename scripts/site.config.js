@@ -43,7 +43,7 @@ export const siteConfig = {
     portalId: "9493dc14-ef12-4f8a-a35f-8229c103252a",
   },
 
-  header: { variant: 'sidebar' },
+  header: { variant: 'tabmenu' },
 
   seo: {
     title:             "Gravit — Relações com Investidores",
