@@ -30,7 +30,7 @@ export const siteConfig = {
   },
 
   nav: [
-    { id: "a-companhia", label: "A Companhia", href: "/a-companhia.html", children: [] },
+    { id: "shqkdps", label: "A Companhia", href: "/", pageType: "show", children: [] },
   ],
 
   empresas: [
