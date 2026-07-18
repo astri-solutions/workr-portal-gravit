@@ -6,9 +6,9 @@ export const siteConfig = {
     name:        "Gravit",
     nameShort:   "Gravit",
     description: 'Relações com Investidores — Gravit.',
-    logoOriginal: '/assets/logotipo/logotipo-original.webp',
-    logoNegative: '/assets/logotipo/logotipo-negative.webp',
-    logoContrast: '/assets/logotipo/logotipo-negative.webp',
+    logoOriginal: '/assets/logotipo/logotipo-original.svg',
+    logoNegative: '/assets/logotipo/logotipo-negative.svg',
+    logoContrast: '/assets/logotipo/logotipo-negative.svg',
     favicon:      '/favicon.svg',
   },
 
@@ -50,10 +50,10 @@ export const siteConfig = {
   ],
 
   empresas: [
-    { id: "principal-1784328469005", label: "Gravit", short: "G" }
+    { id: 'principal', label: "Gravit", short: "G" }
   ],
 
-  header: { variant: 'tabmenu' },
+  header: { variant: 'sidebar' },
 
   restrictedNav: [],
 
