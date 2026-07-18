@@ -24,54 +24,55 @@ export const siteConfig = {
   },
 
   ticker: {
-    type:      "static",
-    iframeUrl: "",
-    items: [
-      { symbol: 'WRLT3', price: 'R$ 00,00', change: '0,00%', direction: 'up' }
-    ],
+    type: 'static',
+    iframeUrl: '',
+    items: [{ symbol: 'WRLT3', price: 'R$ 00,00', change: '0,00%', direction: 'up' }],
   },
 
   nav: [
-    { label: 'A Companhia', href: '/a-companhia.html', children: [] },
-    { label: 'Governança', children: [
-        { label: 'Composição Acionária', href: '/composicao-acionaria.html' },
-        { label: 'Atas e Assembleias',   href: '/atas-assembleias.html'     },
-        { label: 'Documentos CVM',       href: '/documentos-cvm.html'       },
-    ]},
-    { label: 'Investidores', children: [
-        { label: 'Central de Resultados', href: '/central-resultados.html' },
-        { label: 'Calendário de Eventos', href: '/calendario-eventos.html' },
-        { label: 'Ratings',               href: '/ratings.html'            },
-    ]},
-    { label: 'Contato', children: [
-        { label: 'Fale com RI', href: '/fale-com-ri.html' },
-        { label: 'Mailing',     href: '/mailing.html'     },
-    ]},
+    { id: "a-companhia", label: "A Companhia", href: "/a-companhia.html", children: [] },
+    { id: "governanca", label: "Governança", children: [
+      { id: "composicao", label: "Composição Acionária", href: "/composicao-acionaria.html" },
+      { id: "atas", label: "Atas e Assembleias", href: "/atas-assembleias.html" },
+      { id: "docs-cvm", label: "Documentos CVM", href: "/documentos-cvm.html" },
+    ] },
+    { id: "investidores", label: "Investidores", children: [
+      { id: "resultados", label: "Resultados", href: "/central-resultados.html" },
+      { id: "calendario", label: "Calendário de Eventos", href: "/calendario-eventos.html" },
+      { id: "ratings", label: "Ratings", href: "/ratings.html" },
+    ] },
+    { id: "contato", label: "Contato", children: [
+      { id: "fale-ri", label: "Fale com RI", href: "/fale-com-ri.html" },
+      { id: "mailing", label: "Mailing", href: "/mailing.html" },
+    ] },
   ],
 
   empresas: [
-    { id: 'principal', label: "Gravit", short: "G" }
+    { id: 'principal', label: "Gravit", short: "G" },
   ],
+
+  supabase: {
+    url:      "https://mmhuwlpsgnvoxyuofliq.supabase.co",
+    anonKey:  "sb_publishable_BBSPbQc2kZngiK45ecfXaA_X4NANiGj",
+    portalId: "9493dc14-ef12-4f8a-a35f-8229c103252a",
+  },
 
   header: { variant: 'sidebar' },
 
-  restrictedNav: [],
-
-  footer: {
-    variant: 'simple',
-    address:   "",
-    email:     "",
-    phone:     "",
-    hours:     "",
-    copyright: "©Copyright Gravit 2026",
-    social: { linkedin: "#", instagram: "#", facebook: "#" },
-    legalLinks: [
-      { label: "Termos e Condições", href: '/termos-e-condicoes.html' },
-      { label: "Política de Privacidade", href: '/politica-de-privacidade.html' },
-      { label: "Definições de Cookies", href: '/definicao-de-cookies.html' }
-    ],
-    legalText: "As informações contidas neste site são de caráter meramente informativo e não constituem oferta de valores mobiliários.",
+  seo: {
+    title:             "Gravit — Relações com Investidores",
+    description:       "",
+    googleAnalyticsId: "",
+    clarityId:         "",
   },
+
+  contact: {
+    email: "",
+  },
+
+  languages: ["pt-BR"],
+
+  restrictedNav: [],
 
   splash: {
     enabled: false,
@@ -95,14 +96,22 @@ export const siteConfig = {
     showCustomize: false,
   },
 
-  errorPages: [],
-
   banner: [],
 
-  supabase: {
-    url:      "https://mmhuwlpsgnvoxyuofliq.supabase.co",
-    anonKey:  "sb_publishable_BBSPbQc2kZngiK45ecfXaA_X4NANiGj",
-    portalId: "9493dc14-ef12-4f8a-a35f-8229c103252a",
+  footer: {
+    variant:   'simple',
+    address:   "",
+    email:     "",
+    phone:     "",
+    hours:     "",
+    copyright: "©Copyright Gravit 2026",
+    social: { linkedin: "#", instagram: "#", facebook: "#" },
+    legalLinks: [
+      { label: "Termos e Condições", href: '/termos-e-condicoes.html' },
+      { label: "Política de Privacidade", href: '/politica-de-privacidade.html' },
+      { label: "Definições de Cookies", href: '/definicao-de-cookies.html' }
+    ],
+    legalText: "As informações contidas neste site são de caráter meramente informativo e não constituem oferta de valores mobiliários.",
   },
 
 };
