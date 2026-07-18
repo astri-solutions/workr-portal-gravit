@@ -13,9 +13,9 @@ export const siteConfig = {
   },
 
   colors: {
-    primary:   "#ff00b5",
-    secondary: "#ff0000",
-    tertiary:  "#f46161",
+    primary:   "#0B5B68",
+    secondary: "#00D865",
+    tertiary:  "#F4A261",
   },
 
   fonts: {
@@ -30,11 +30,25 @@ export const siteConfig = {
   },
 
   nav: [
-    { id: "shqkdps", label: "A Companhia", href: "/", pageType: "show", children: [] },
+    { label: 'A Companhia', href: '/a-companhia.html', children: [] },
+    { label: 'Governança', children: [
+        { label: 'Composição Acionária', href: '/composicao-acionaria.html' },
+        { label: 'Atas e Assembleias',   href: '/atas-assembleias.html'     },
+        { label: 'Documentos CVM',       href: '/documentos-cvm.html'       },
+    ]},
+    { label: 'Investidores', children: [
+        { label: 'Central de Resultados', href: '/central-resultados.html' },
+        { label: 'Calendário de Eventos', href: '/calendario-eventos.html' },
+        { label: 'Ratings',               href: '/ratings.html'            },
+    ]},
+    { label: 'Contato', children: [
+        { label: 'Fale com RI', href: '/fale-com-ri.html' },
+        { label: 'Mailing',     href: '/mailing.html'     },
+    ]},
   ],
 
   empresas: [
-    { id: 'principal', label: "Gravit", short: "G" },
+    { id: "principal-1784328469005", label: "Gravit", short: "G" },
   ],
 
   supabase: {
