@@ -32,21 +32,10 @@ export const siteConfig = {
   },
 
   nav: [
-    { label: 'A Companhia', href: '/a-companhia.html', children: [] },
-    { label: 'Governança', children: [
-        { label: 'Composição Acionária', href: '/composicao-acionaria.html' },
-        { label: 'Atas e Assembleias',   href: '/atas-assembleias.html'     },
-        { label: 'Documentos CVM',       href: '/documentos-cvm.html'       },
-    ]},
-    { label: 'Investidores', children: [
-        { label: 'Central de Resultados', href: '/central-resultados.html' },
-        { label: 'Calendário de Eventos', href: '/calendario-eventos.html' },
-        { label: 'Ratings',               href: '/ratings.html'            },
-    ]},
-    { label: 'Contato', children: [
-        { label: 'Fale com RI', href: '/fale-com-ri.html' },
-        { label: 'Mailing',     href: '/mailing.html'     },
-    ]},
+    { id: "central-resultados", label: "Resultados", href: "/central-resultados.html", children: [] },
+    { id: "docs-cvm", label: "Documentos CVM", href: "/documentos-cvm.html", children: [] },
+    { id: "atas-assembleias", label: "Atas e Assembleias", href: "/atas-assembleias.html", children: [] },
+    { id: "fale-ri", label: "Fale com RI", href: "/fale-com-ri.html", children: [] },
   ],
 
   empresas: [
