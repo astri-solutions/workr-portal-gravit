@@ -13,9 +13,9 @@ export const siteConfig = {
   },
 
   colors: {
-    primary:   "#0B5B68",
-    secondary: "#00D865",
-    tertiary:  "#F4A261",
+    primary:   "#ff0000",
+    secondary: "#ff00c6",
+    tertiary:  "#61f492",
   },
 
   fonts: {
@@ -24,9 +24,11 @@ export const siteConfig = {
   },
 
   ticker: {
-    type: 'static',
-    iframeUrl: '',
-    items: [{ symbol: 'WRLT3', price: 'R$ 00,00', change: '0,00%', direction: 'up' }],
+    type:      "static",
+    iframeUrl: "",
+    items: [
+      { symbol: 'WRLT3', price: 'R$ 00,00', change: '0,00%', direction: 'up' }
+    ],
   },
 
   nav: [
@@ -48,31 +50,36 @@ export const siteConfig = {
   ],
 
   empresas: [
-    { id: "principal-1784328469005", label: "Gravit", short: "G" },
+    { id: "principal-1784328469005", label: "Gravit", short: "G" }
   ],
-
-  supabase: {
-    url:      "https://mmhuwlpsgnvoxyuofliq.supabase.co",
-    anonKey:  "sb_publishable_BBSPbQc2kZngiK45ecfXaA_X4NANiGj",
-    portalId: "9493dc14-ef12-4f8a-a35f-8229c103252a",
-  },
 
   header: { variant: 'tabmenu' },
 
-  seo: {
-    title:             "Gravit — Relações com Investidores",
-    description:       "",
-    googleAnalyticsId: "",
-    clarityId:         "",
-  },
-
-  contact: {
-    email: "",
-  },
-
   languages: ["pt-BR"],
 
+  topbar: {
+    ri: { label: "Relações com Investidores", url: "/" },
+    institucional: { label: "Institucional", url: "#" },
+    showTicker: true,
+  },
+
   restrictedNav: [],
+
+  footer: {
+    variant: 'simple',
+    address:   "",
+    email:     "",
+    phone:     "",
+    hours:     "",
+    copyright: "©Copyright Gravit 2026",
+    social: { linkedin: "#", instagram: "#", facebook: "#" },
+    legalLinks: [
+      { label: "Termos e Condições", href: "/termos-e-condicoes.html" },
+      { label: "Política de Privacidade", href: "/politica-de-privacidade.html" },
+      { label: "Definições de Cookies", href: "/definicao-de-cookies.html" }
+    ],
+    legalText: "As informações contidas neste site são de caráter meramente informativo e não constituem oferta de valores mobiliários.",
+  },
 
   splash: {
     enabled: false,
@@ -96,22 +103,14 @@ export const siteConfig = {
     showCustomize: false,
   },
 
+  errorPages: [],
+
   banner: [],
 
-  footer: {
-    variant:   'simple',
-    address:   "",
-    email:     "",
-    phone:     "",
-    hours:     "",
-    copyright: "©Copyright Gravit 2026",
-    social: { linkedin: "#", instagram: "#", facebook: "#" },
-    legalLinks: [
-      { label: "Termos e Condições", href: '/termos-e-condicoes.html' },
-      { label: "Política de Privacidade", href: '/politica-de-privacidade.html' },
-      { label: "Definições de Cookies", href: '/definicao-de-cookies.html' }
-    ],
-    legalText: "As informações contidas neste site são de caráter meramente informativo e não constituem oferta de valores mobiliários.",
+  supabase: {
+    url:      "https://mmhuwlpsgnvoxyuofliq.supabase.co",
+    anonKey:  "sb_publishable_BBSPbQc2kZngiK45ecfXaA_X4NANiGj",
+    portalId: "9493dc14-ef12-4f8a-a35f-8229c103252a",
   },
 
 };
