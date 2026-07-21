@@ -33,7 +33,7 @@ export const siteConfig = {
 
   nav: [
     { id: "central-resultados", label: "Resultados", href: "/central-resultados.html", children: [] },
-    { id: "docs-cvm", label: "Documentos CVM", href: "/documentos-cvm.html", children: [] },
+    { id: "docs-cvm", label: "Documentos CVM", href: "/documentos-cvm.html", pageType: "lista", children: [] },
     { id: "atas-assembleias", label: "Atas e Assembleias", href: "/atas-assembleias.html", children: [] },
     { id: "fale-ri", label: "Fale com RI", href: "/fale-com-ri.html", children: [] },
   ],
@@ -44,12 +44,12 @@ export const siteConfig = {
 
   header: { variant: 'tabmenu' },
 
-  languages: ["pt-BR"],
+  languages: ["pt-BR","en","es"],
 
   topbar: {
     ri: { label: "Relações com Investidores", url: "/" },
     institucional: { label: "Institucional", url: "#" },
-    showTicker: true,
+    showTicker: false,
   },
 
   restrictedNav: [],
