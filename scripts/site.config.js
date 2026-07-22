@@ -19,7 +19,7 @@ export const siteConfig = {
   },
 
   fonts: {
-    display: "Plus Jakarta Sans",
+    display: "Montserrat",
     body:    "Inter",
   },
 
