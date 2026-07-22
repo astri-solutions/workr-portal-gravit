@@ -85,7 +85,7 @@ export const siteConfig = {
     "enabled": true,
     "legenda": "",
     "conteudo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis facilisis velit, id eleifend lorem. Nulla et pretium orci. Etiam suscipit imperdiet felis sit amet molestie.",
-    "imageUrl": "blob:https://workr-lite-v1.vercel.app/f092936d-3ed9-4525-af1d-34ed3b694e0b"
+    "imageUrl": "blob:https://workr-lite-v1.vercel.app/7b6206d6-3b90-4f3c-879f-db4ae3dae3b9"
   },
 
   cookies: {
