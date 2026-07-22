@@ -72,7 +72,7 @@ export const siteConfig = {
   },
 
   splash: {
-    "size": "md",
+    "size": "sm",
     "texto": "Este é um teste de splash",
     "titulo": "Divulgação de Resultados 1T26",
     "buttons": [
@@ -85,7 +85,7 @@ export const siteConfig = {
     "enabled": true,
     "legenda": "",
     "conteudo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis facilisis velit, id eleifend lorem. Nulla et pretium orci. Etiam suscipit imperdiet felis sit amet molestie.",
-    "imageUrl": "blob:https://workr-lite-v1.vercel.app/7b6206d6-3b90-4f3c-879f-db4ae3dae3b9"
+    "imageUrl": "/assets/splash/header.webp"
   },
 
   cookies: {
