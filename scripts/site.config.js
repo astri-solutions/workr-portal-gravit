@@ -72,13 +72,20 @@ export const siteConfig = {
   },
 
   splash: {
-    enabled: false,
-    size: 'md',
-    titulo: '',
-    texto: '',
-    conteudo: '',
-    legenda: '',
-    buttons: [],
+    "size": "md",
+    "texto": "Este é um teste de splash",
+    "titulo": "Divulgação de Resultados 1T26",
+    "buttons": [
+      {
+        "url": "",
+        "label": "Saiba mais",
+        "variant": "primary"
+      }
+    ],
+    "enabled": true,
+    "legenda": "",
+    "conteudo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis facilisis velit, id eleifend lorem. Nulla et pretium orci. Etiam suscipit imperdiet felis sit amet molestie.",
+    "imageUrl": "blob:https://workr-lite-v1.vercel.app/f092936d-3ed9-4525-af1d-34ed3b694e0b"
   },
 
   cookies: {
