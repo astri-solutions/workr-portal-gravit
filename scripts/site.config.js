@@ -9,7 +9,7 @@ export const siteConfig = {
     logoOriginal: '/assets/logotipo/logotipo-original.webp',
     logoNegative: '/assets/logotipo/logotipo-negative.webp',
     logoContrast: '/assets/logotipo/logotipo-negative.webp',
-    favicon:      '/favicon.svg',
+    favicon:      '/favicon.png',
   },
 
   colors: {
