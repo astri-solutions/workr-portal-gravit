@@ -37,6 +37,7 @@ export const siteConfig = {
     { id: "atas-assembleias", label: "Atas e Assembleias", href: "/atas-assembleias.html", pageType: "lista-agrupada", children: [] },
     { id: "fale-ri", label: "Fale com RI", href: "/fale-com-ri.html", children: [] },
     { id: "ygd1y5m", label: "Teste Documento", href: "/ygd1y5m.html", pageType: "lista-agrupada", children: [] },
+    { id: "wp6ouvf", label: "Canal tipo lista", href: "/wp6ouvf.html", pageType: "lista", children: [] },
   ],
 
   empresas: [
