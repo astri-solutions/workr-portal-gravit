@@ -44,7 +44,7 @@ export const siteConfig = {
     { id: "gravit-design-1784751559651", label: "Gravit Design", short: "GD" }
   ],
 
-  header: { variant: 'sidebar' },
+  header: { variant: 'tabmenu' },
 
   languages: ["pt-BR","en","es"],
 
