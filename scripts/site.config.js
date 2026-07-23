@@ -33,7 +33,7 @@ export const siteConfig = {
 
   nav: [
     { id: "central-resultados", label: "Resultados", href: "/central-resultados.html", pageType: "tabela-resultados", children: [] },
-    { id: "docs-cvm", label: "Documentos CVM", href: "/documentos-cvm.html", pageType: "lista", children: [] },
+    { id: "docs-cvm", label: "Documentos CVM 2", href: "/documentos-cvm.html", pageType: "lista", children: [] },
     { id: "atas-assembleias", label: "Atas e Assembleias", href: "/atas-assembleias.html", pageType: "lista-agrupada", children: [] },
     { id: "fale-ri", label: "Fale com RI", href: "/fale-com-ri.html", children: [] },
     { id: "ygd1y5m", label: "Teste Documento", href: "/ygd1y5m.html", pageType: "lista-agrupada", children: [] },
