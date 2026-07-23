@@ -40,7 +40,14 @@ function buildSidebar() {
     panel.dataset.panel = slug;
     panel.setAttribute('role', 'tabpanel');
     panel.setAttribute('aria-label', ch.label);
-    panel.innerHTML = `<div data-materias></div><div class="page-empty"></div>`;
+    // No .page-empty here — it must only appear once loadPanel() has
+    // actually tried and failed to find content. The global MutationObserver
+    // in page.js converts .page-empty into "Em construção" the instant it's
+    // inserted, so adding it upfront (before the async fetch even starts)
+    // permanently stuck every panel at "Em construção" — loadPanel() never
+    // retries a slug once it's been attempted, so the premature conversion
+    // never had a chance to be corrected afterward.
+    panel.innerHTML = `<div data-materias></div>`;
     contentArea.appendChild(panel);
   });
 
@@ -59,23 +66,36 @@ function buildSidebar() {
     const found = await loadMateriasInto(slug, container, sb);
     const ch = channelBySlug.get(slug) ?? slug;
     const found2 = found || await loadDocumentosInto(ch, container, sb, siteConfig);
-    if (!found2) await loadResultadosInto(ch, container, sb, siteConfig);
+    const found3 = found2 || await loadResultadosInto(ch, container, sb, siteConfig);
+    // Only now — after every loader has actually tried — do we know the
+    // channel really has nothing to show.
+    if (!found3 && panel && !panel.querySelector('.page-empty, .em-construcao')) {
+      panel.insertAdjacentHTML('beforeend', '<div class="page-empty"></div>');
+    }
+  }
+
+  function activate(slug) {
+    if (!channelBySlug.has(slug)) return false;
+    btns.forEach(b => { b.classList.toggle('is-active', b.dataset.panel === slug); b.setAttribute('aria-selected', String(b.dataset.panel === slug)); });
+    panels.forEach(p => p.classList.toggle('is-active', p.dataset.panel === slug));
+    loadPanel(slug);
+    return true;
   }
 
   btns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = btn.dataset.panel;
-      btns.forEach(b => { b.classList.remove('is-active'); b.setAttribute('aria-selected', 'false'); });
-      panels.forEach(p => p.classList.remove('is-active'));
-      btn.classList.add('is-active');
-      btn.setAttribute('aria-selected', 'true');
-      contentArea.querySelector(`[data-panel="${target}"]`)?.classList.add('is-active');
-      loadPanel(target);
-    });
+    btn.addEventListener('click', () => activate(btn.dataset.panel));
   });
 
-  // Eagerly load the first (default-active) panel.
-  loadPanel(channels[0].id ?? channels[0].slug ?? channels[0].label.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''));
+  // The mobile menu links to home+hash instead of a standalone page (there
+  // isn't one — everything renders inline here), so hash changes need to
+  // swap panels the same way clicking a sidebar button does.
+  window.addEventListener('hashchange', () => activate(location.hash.slice(1)));
+
+  const initialSlug = location.hash.slice(1);
+  if (!activate(initialSlug)) {
+    // Eagerly load the first (default-active) panel.
+    loadPanel(channels[0].id ?? channels[0].slug ?? channels[0].label.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''));
+  }
 }
 
 buildSidebar();
