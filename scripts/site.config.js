@@ -13,7 +13,7 @@ export const siteConfig = {
   },
 
   colors: {
-    primary:   "#462C7D",
+    primary:   "#4b2d89",
     secondary: "#831C91",
     tertiary:  "#ff76c3",
   },
@@ -40,7 +40,8 @@ export const siteConfig = {
   ],
 
   empresas: [
-    { id: "principal-1784328469005", label: "Gravit", short: "G" }
+    { id: "principal-1784328469005", label: "Gravit", short: "G" },
+    { id: "gravit-design-1784751559651", label: "Gravit Design", short: "GD" }
   ],
 
   header: { variant: 'sidebar' },
