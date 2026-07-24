@@ -59,22 +59,18 @@ export const siteConfig = {
 
   footer: {
     variant: 'simple',
-    address:   "",
-    email:     "",
-    phone:     "",
-    hours:     "",
-    copyright: "©Copyright Gravit 2026",
+    email: "",
+    content: {"pt-BR":{"address":"","phone":"","hours":"","copyright":"©Copyright Gravit 2026","disclaimer":"As informações contidas neste site são de caráter meramente informativo e não constituem oferta de valores mobiliários."}},
     social: { linkedin: "#", instagram: "#", facebook: "#" },
     legalLinks: [
       { label: "Termos e Condições", href: "/termos-e-condicoes.html" },
       { label: "Política de Privacidade", href: "/politica-de-privacidade.html" },
       { label: "Definições de Cookies", href: "/definicao-de-cookies.html" }
     ],
-    legalText: "As informações contidas neste site são de caráter meramente informativo e não constituem oferta de valores mobiliários.",
   },
 
   splash: {
-    "size": "sm",
+    "size": "md",
     "texto": "Este é um teste de splash",
     "titulo": "Divulgação de Resultados 1T26",
     "buttons": [
